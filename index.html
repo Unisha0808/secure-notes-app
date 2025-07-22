@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Notes App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Secure Notes</h1>
+
+    <div class="note-input">
+      <input type="text" id="noteTitle" placeholder="Note Title" />
+      <textarea id="noteText" placeholder="Write your note here..."></textarea>
+      <input type="password" id="notePassword" placeholder="Enter password to encrypt" />
+      <button onclick="addNote()">Add Secure Note</button>
+      <p class="warning">⚠️ Notes will disappear automatically after 1 minute if not deleted.</p>
+    </div>
+
+    <div id="notesList" class="notes-scroll"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
